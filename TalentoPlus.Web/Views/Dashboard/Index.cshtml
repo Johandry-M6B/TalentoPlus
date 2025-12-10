@@ -1,0 +1,89 @@
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Dashboard</h1>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-3">
+        <div class="card text-white bg-primary mb-3">
+            <div class="card-header">Total Employees</div>
+            <div class="card-body">
+                <h5 class="card-title">@ViewBag.TotalEmployees</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-warning mb-3">
+            <div class="card-header">On Vacation</div>
+            <div class="card-body">
+                <h5 class="card-title">@ViewBag.VacationCount</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-success mb-3">
+            <div class="card-header">Active Employees</div>
+            <div class="card-body">
+                <h5 class="card-title">@ViewBag.ActiveCount</h5>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-secondary mb-3">
+            <div class="card-header">Inactive Employees</div>
+            <div class="card-body">
+                <h5 class="card-title">@ViewBag.InactiveCount</h5>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row mt-4">
+    <div class="col-md-12 text-center">
+        <a asp-controller="Employees" asp-action="Index" class="btn btn-primary btn-lg">Manage Employees</a>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">AI Assistant</div>
+            <div class="card-body">
+                <div class="input-group mb-3">
+                    <input type="text" id="questionInput" class="form-control" placeholder="Ask something about employees... (e.g. How many employees are in IT?)" />
+                    <button class="btn btn-outline-secondary" type="button" id="askBtn">Ask AI</button>
+                </div>
+                <div id="aiResponse" class="alert alert-info" style="display:none;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById('askBtn').addEventListener('click', async () => {
+            const question = document.getElementById('questionInput').value;
+            const responseDiv = document.getElementById('aiResponse');
+            
+            responseDiv.style.display = 'block';
+            responseDiv.innerText = 'Thinking...';
+
+            try {
+                const response = await fetch('@Url.Action("AskAi", "Dashboard")', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(question)
+                });
+                
+                const data = await response.json();
+                responseDiv.innerText = data.answer;
+            } catch (error) {
+                responseDiv.innerText = 'Error: ' + error;
+            }
+        });
+    </script>
+}

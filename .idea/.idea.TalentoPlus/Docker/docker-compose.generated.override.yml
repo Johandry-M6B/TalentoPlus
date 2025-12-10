@@ -1,0 +1,40 @@
+# This is a generated file. Not intended for manual editing.
+version: "3.8"
+services:
+  api:
+    build:
+      context: "/home/Coder/Escritorio/Johandry CShark - tarde./Johandry CShark/TalentoPlus"
+      dockerfile: "TalentoPlus.API/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/TalentoPlus.API.dll"
+    environment:
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "talentoplus.api:dev"
+    ports: []
+    volumes:
+    - "/home/Coder/Escritorio/Johandry CShark - tarde./Johandry CShark/TalentoPlus/TalentoPlus.API:/app:rw"
+    - "/home/Coder/Escritorio/Johandry CShark - tarde./Johandry CShark/TalentoPlus:/src:rw"
+    - "/home/Coder/.nuget/packages:/root/.nuget/packages"
+    working_dir: "/app"
+  web:
+    build:
+      context: "/home/Coder/Escritorio/Johandry CShark - tarde./Johandry CShark/TalentoPlus"
+      dockerfile: "TalentoPlus.Web/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/TalentoPlus.Web.dll"
+    environment:
+      ASPNETCORE_STATICWEBASSETS: "/app/bin/Debug/net8.0/TalentoPlus.Web.staticwebassets.runtime.CT.json"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "talentoplus.web:dev"
+    ports: []
+    volumes:
+    - "/home/Coder/Escritorio/Johandry CShark - tarde./Johandry CShark/TalentoPlus/TalentoPlus.Web:/app:rw"
+    - "/home/Coder/Escritorio/Johandry CShark - tarde./Johandry CShark/TalentoPlus:/src:rw"
+    - "/home/Coder/.nuget/packages:/root/.nuget/packages"
+    working_dir: "/app"

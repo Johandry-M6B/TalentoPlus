@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: TalentoPlus.Web/Dockerfile
+    container_name: talentoplus_web
+    ports:
+      - "1924:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ConnectionStrings__DefaultConnection=Host=aws-0-us-west-2.pooler.supabase.com;Port=6543;Database=postgres;Username=postgres.ibdfgoxguvugtaqsvulr;Password=1001877889Ka;Ssl Mode=Require;Trust Server Certificate=true;Pooling=false;KeepAlive=30
+      - EmailSettings__SmtpHost=smtp.gmail.com
+      - EmailSettings__SmtpPort=587
+      - EmailSettings__SmtpUser=user@example.com
+      - EmailSettings__SmtpPassword=password
+      - GeminiSettings__ApiKey=dummy-key
+    networks:
+      - talentoplus_network
+    restart: unless-stopped
+
+  api:
+    build:
+      context: .
+      dockerfile: TalentoPlus.API/Dockerfile
+    container_name: talentoplus_api
+    ports:
+      - "1925:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ConnectionStrings__DefaultConnection=Host=aws-0-us-west-2.pooler.supabase.com;Port=6543;Database=postgres;Username=postgres.ibdfgoxguvugtaqsvulr;Password=1001877889Ka;Ssl Mode=Require;Trust Server Certificate=true;Pooling=false;KeepAlive=30
+      - JwtSettings__Secret=ThisIsASecretKeyForJwtTokenGenerationAndItIsVeryLongToMeetTheRequirements
+      - JwtSettings__Issuer=TalentoPlusAPI
+      - JwtSettings__Audience=TalentoPlusClients
+      - EmailSettings__SmtpHost=smtp.gmail.com
+      - EmailSettings__SmtpPort=587
+      - EmailSettings__SmtpUser=user@example.com
+      - EmailSettings__SmtpPassword=password
+    networks:
+      - talentoplus_network
+    restart: unless-stopped
+
+networks:
+  talentoplus_network:
+    driver: bridge
