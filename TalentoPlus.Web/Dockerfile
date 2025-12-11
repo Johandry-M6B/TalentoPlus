@@ -26,4 +26,4 @@ RUN dotnet publish "./TalentoPlus.Web.csproj" -c $BUILD_CONFIGURATION -o /app/pu
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "TalentoPlus.Web.dll"]
+ENTRYPOINT ["dotnet", "TalentoPlus.Web.dll"]+

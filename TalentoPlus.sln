@@ -1,40 +1,48 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalentoPlus.Core", "TalentoPlus.Core\TalentoPlus.Core.csproj", "{279581E3-2FD9-41EF-B331-F0E2F7097457}"
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalentoPlus.Core", "TalentoPlus.Core\TalentoPlus.Core.csproj", "{11111111-1111-1111-1111-111111111111}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalentoPlus.Infrastructure", "TalentoPlus.Infrastructure\TalentoPlus.Infrastructure.csproj", "{BEF3311F-341E-454C-9293-0F65D267F665}"
+
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalentoPlus.Infrastructure", "TalentoPlus.Infrastructure\TalentoPlus.Infrastructure.csproj", "{22222222-2222-2222-2222-222222222222}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalentoPlus.Web", "TalentoPlus.Web\TalentoPlus.Web.csproj", "{5276ACB0-C1AD-4280-A0B2-4A4808F9CD3A}"
+
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalentoPlus.Web", "TalentoPlus.Web\TalentoPlus.Web.csproj", "{33333333-3333-3333-3333-333333333333}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalentoPlus.API", "TalentoPlus.API\TalentoPlus.API.csproj", "{39763C99-FFD6-455A-BCAE-F31D1C89C12D}"
+
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalentoPlus.API", "TalentoPlus.API\TalentoPlus.API.csproj", "{44444444-4444-4444-4444-444444444444}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalentoPlus.Tests", "TalentoPlus.Tests\TalentoPlus.Tests.csproj", "{94206D04-0470-4D07-A4A3-29AD3223CACE}"
+
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalentoPlus.Tests", "TalentoPlus.Tests\TalentoPlus.Tests.csproj", "{55555555-5555-5555-5555-555555555555}"
 EndProject
+
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{279581E3-2FD9-41EF-B331-F0E2F7097457}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{279581E3-2FD9-41EF-B331-F0E2F7097457}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{279581E3-2FD9-41EF-B331-F0E2F7097457}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{279581E3-2FD9-41EF-B331-F0E2F7097457}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BEF3311F-341E-454C-9293-0F65D267F665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BEF3311F-341E-454C-9293-0F65D267F665}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BEF3311F-341E-454C-9293-0F65D267F665}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BEF3311F-341E-454C-9293-0F65D267F665}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5276ACB0-C1AD-4280-A0B2-4A4808F9CD3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5276ACB0-C1AD-4280-A0B2-4A4808F9CD3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5276ACB0-C1AD-4280-A0B2-4A4808F9CD3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5276ACB0-C1AD-4280-A0B2-4A4808F9CD3A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{39763C99-FFD6-455A-BCAE-F31D1C89C12D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{39763C99-FFD6-455A-BCAE-F31D1C89C12D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{39763C99-FFD6-455A-BCAE-F31D1C89C12D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{39763C99-FFD6-455A-BCAE-F31D1C89C12D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{94206D04-0470-4D07-A4A3-29AD3223CACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{94206D04-0470-4D07-A4A3-29AD3223CACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{94206D04-0470-4D07-A4A3-29AD3223CACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{94206D04-0470-4D07-A4A3-29AD3223CACE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11111111-1111-1111-1111-111111111111}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11111111-1111-1111-1111-111111111111}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11111111-1111-1111-1111-111111111111}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11111111-1111-1111-1111-111111111111}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22222222-2222-2222-2222-222222222222}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22222222-2222-2222-2222-222222222222}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22222222-2222-2222-2222-222222222222}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22222222-2222-2222-2222-222222222222}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33333333-3333-3333-3333-333333333333}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33333333-3333-3333-3333-333333333333}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33333333-3333-3333-3333-333333333333}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33333333-3333-3333-3333-333333333333}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44444444-4444-4444-4444-444444444444}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44444444-4444-4444-4444-444444444444}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44444444-4444-4444-4444-444444444444}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44444444-4444-4444-4444-444444444444}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55555555-5555-5555-5555-555555555555}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55555555-5555-5555-5555-555555555555}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55555555-5555-5555-5555-555555555555}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55555555-5555-5555-5555-555555555555}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

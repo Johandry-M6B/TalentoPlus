@@ -17,7 +17,7 @@ services:
     volumes:
     - "/home/Coder/Escritorio/Johandry CShark - tarde./Johandry CShark/TalentoPlus/TalentoPlus.API:/app:rw"
     - "/home/Coder/Escritorio/Johandry CShark - tarde./Johandry CShark/TalentoPlus:/src:rw"
-    - "/home/Coder/.nuget/packages:/root/.nuget/packages"
+    - "/home/Coder/.nuget/packages:/home/app/.nuget/packages"
     working_dir: "/app"
   web:
     build:
@@ -36,5 +36,5 @@ services:
     volumes:
     - "/home/Coder/Escritorio/Johandry CShark - tarde./Johandry CShark/TalentoPlus/TalentoPlus.Web:/app:rw"
     - "/home/Coder/Escritorio/Johandry CShark - tarde./Johandry CShark/TalentoPlus:/src:rw"
-    - "/home/Coder/.nuget/packages:/root/.nuget/packages"
+    - "/home/Coder/.nuget/packages:/home/app/.nuget/packages"
     working_dir: "/app"
